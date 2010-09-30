@@ -18,7 +18,7 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 <package>hadoop</package>
 
 <post>
-# TODO
+/bin/ln -s /opt/hadoop/hadoop-* /opt/hadoop/hadoop
 </post>
 
 </kickstart>
