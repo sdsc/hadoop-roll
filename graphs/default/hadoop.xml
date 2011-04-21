@@ -22,4 +22,11 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
   <tail>hadoop-install</tail>
 </order>
 
+<edge from="base">
+  <to>hadoop-roll-test</to>
+</edge>
+<order head="base">
+  <tail>hadoop-roll-test</tail>
+</order>
+
 </graph>
