@@ -26,11 +26,12 @@ use Test::More qw(no_plan);
 my $appliance = $#ARGV >= 0 ? $ARGV[0] :
                 -d '/export/rocks/install' ? 'Frontend' : 'Compute';
 my $isCompute = $appliance eq 'Compute';
+my $isDbnode = $appliance eq 'Dbnode';
 my $isFe = $appliance eq 'Frontend';
 my $isLogin = $appliance eq 'Login';
 my $output;
 
-if ($isCompute) {
+if ($isCompute || $isDbnode) {
   ok(-d '/opt/hadoop', 'hadoop installed');
 } else {
   ok(! -d '/opt/hadoop', 'hadoop not installed');
