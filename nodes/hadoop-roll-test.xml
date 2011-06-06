@@ -20,30 +20,33 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 
 <file name="/root/rolltests/hadoop.t" perms="0755">
 <![CDATA[#!/usr/bin/perl -w
+# hadoop roll installation test.  Usage:
+# hadoop.t [nodetype]
+#   where nodetype is one of "Compute", "Dbnode", "Frontend" or "Login"
+#   if not specified, the test assumes either Compute or Frontend
 
 use Test::More qw(no_plan);
 
 my $appliance = $#ARGV >= 0 ? $ARGV[0] :
                 -d '/export/rocks/install' ? 'Frontend' : 'Compute';
-my $isCompute = $appliance eq 'Compute';
-my $isDbnode = $appliance eq 'Dbnode';
-my $isFe = $appliance eq 'Frontend';
-my $isLogin = $appliance eq 'Login';
+my $installedOnAppliancesPattern = 'Compute|Dbnode';
+my $hadoopHome = '/opt/hadoop';
+my $isInstalled = -d $hadoopHome;
 my $output;
 
-if ($isCompute || $isDbnode) {
-  ok(-d '/opt/hadoop', 'hadoop installed');
+# hadoop-install.xml
+if($appliance =~ /$installedOnAppliancesPattern/) {
+  ok($isInstalled, 'hadoop installed');
+  ok(-d "$hadoopHome/hadoop/contrib/myHadoop", 'myHadoop installed');
 } else {
-  ok(! -d '/opt/hadoop', 'hadoop not installed');
+  ok(! $isInstalled, 'hadoop not installed');
 }
 SKIP: {
-
-  skip 'hadoop roll not installed', 4 if ! -d '/opt/hadoop';
-  ok(-l '/opt/hadoop/hadoop', 'hadoop symbolic link created');
-  ok(-d '/opt/hadoop/hadoop/logs', 'hadoop log dir created');
-  like(`ls -ld /opt/hadoop/hadoop/logs`, qr/rwxrwxrwx/, 'log dir world-writable');
-  ok(-d '/opt/hadoop/hadoop/contrib/myHadoop', 'myHadoop installed');
-
+  skip 'hadoop roll not installed', 3 if ! $isInstalled;
+  ok(-l "$hadoopHome/hadoop", 'hadoop symbolic link created');
+  ok(-d "$hadoopHome/hadoop/logs", 'hadoop log dir created');
+  like(`ls -ld $hadoopHome/hadoop/logs`, qr/rwxrwxrwx/,
+       'hadoop log dir world-writable');
 }
 
 ]]>
