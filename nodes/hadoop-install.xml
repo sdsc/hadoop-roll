@@ -20,8 +20,7 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 
 <post>
 /bin/ln -s /opt/hadoop/hadoop-* /opt/hadoop/hadoop
-/bin/mkdir /opt/hadoop/hadoop/logs
-/bin/chmod 0777 /opt/hadoop/hadoop/logs
+/bin/mkdir -m 777 /opt/hadoop/hadoop/logs
 </post>
 
 </kickstart>

@@ -56,16 +56,17 @@
 #
 
 PKGROOT = /opt/hadoop
+SOURCE = hadoop-$(VERSION)
 REDHAT.ROOT = $(PWD)/../../
 
 -include $(ROCKSROOT)/etc/Rules.mk
 
 build:
-	tar zxvf $(NAME)-$(VERSION).tar.gz
+	tar zxvf $(SOURCE).tar.gz
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)
-	cp -r $(NAME)-$(VERSION) $(ROOT)/$(PKGROOT)
+	cp -r $(SOURCE) $(ROOT)/$(PKGROOT)
 
 clean::
-	rm -rf $(NAME)-$(VERSION)
+	rm -rf $(SOURCE)
