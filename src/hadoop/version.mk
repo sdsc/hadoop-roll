@@ -1,3 +1,3 @@
 NAME    = hadoop
-VERSION = 0.20.2
+VERSION = 2.0.0-alpha
 RELEASE = 1
