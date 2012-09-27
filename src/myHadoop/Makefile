@@ -55,7 +55,7 @@
 # @Copyright@
 #
 
-PKGROOT = /opt/hadoop/hadoop-1.0.3/contrib/myHadoop
+PKGROOT = /opt/hadoop/contrib/myHadoop
 SOURCE = myHadoop-$(VERSION)
 REDHAT.ROOT = $(PWD)/../../
 

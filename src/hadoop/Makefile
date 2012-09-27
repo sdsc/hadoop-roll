@@ -66,7 +66,10 @@ build:
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)
-	cp -r $(SOURCE) $(ROOT)/$(PKGROOT)
+	( \
+           cd $(SOURCE); \
+	   cp -r . $(ROOT)/$(PKGROOT) \
+        )
 
 clean::
 	rm -rf $(SOURCE)
