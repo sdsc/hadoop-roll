@@ -1,0 +1,10 @@
+This roll bundles the hadoop distributed processing package and the myHadoop
+add-on.  To install, execute these instructions on a Rocks development machine
+(e.g., a frontend), starting in this directory:
+
+% make
+% rocks add roll *.iso
+% rocks enable roll hadoop
+% cd /export/rocks/install
+% rocks create distro
+% rocks run roll hadoop | bash
