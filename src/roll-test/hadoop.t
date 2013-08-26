@@ -20,9 +20,3 @@ if($appliance =~ /$installedOnAppliancesPattern/) {
 } else {
   ok(! $isInstalled, 'hadoop not installed');
 }
-SKIP: {
-  skip 'hadoop roll not installed', 2 if ! $isInstalled;
-  ok(-d "$hadoopHome/logs", 'hadoop log dir created');
-  like(`ls -ld $hadoopHome/logs`, qr/rwxrwxrwx/,
-       'hadoop log dir world-writable');
-}

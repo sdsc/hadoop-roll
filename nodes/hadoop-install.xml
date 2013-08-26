@@ -21,8 +21,4 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 <package>myHadoop</package>
 <package>hadoop-roll-test</package>
 
-<post>
-/bin/mkdir -m 777 /opt/hadoop/logs
-</post>
-
 </kickstart>
