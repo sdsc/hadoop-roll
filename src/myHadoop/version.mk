@@ -1,6 +1,6 @@
 NAME               = myHadoop
 VERSION            = 0.2a
-RELEASE            = 4
+RELEASE            = 0
 PKGROOT            = /opt/hadoop/contrib/myHadoop
 
 SRC_SUBDIR         = myHadoop
