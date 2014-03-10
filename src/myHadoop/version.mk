@@ -2,6 +2,7 @@ NAME               = myHadoop
 VERSION            = 0.2a
 RELEASE            = 0
 PKGROOT            = /opt/hadoop/contrib/myHadoop
+RPM.EXTRAS         = AutoReq:No
 
 SRC_SUBDIR         = myHadoop
 

@@ -2,6 +2,7 @@ NAME               = hadoop
 VERSION            = 1.1.1
 RELEASE            = 0
 PKGROOT            = /opt/hadoop
+RPM.EXTRAS         = AutoReq:No
 
 SRC_SUBDIR         = hadoop
 
