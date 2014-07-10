@@ -1,0 +1,10 @@
+#%Module1.0
+module-whatis "Spark"
+module-whatis "Version: 0.9.1"
+
+module load hadoop/1.2.1
+
+prepend-path PATH /opt/spark/v0.9.1/bin
+
+# needed by Hadoop
+setenv SPARK_HOME /opt/spark/v0.9.1

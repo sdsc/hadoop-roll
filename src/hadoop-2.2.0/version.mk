@@ -1,12 +1,12 @@
-NAME               = myHadoop
-VERSION            = 0.2a
+VERSION            = 2.2.0
+NAME               = hadoop-$(VERSION)
 RELEASE            = 1
-PKGROOT            = /opt/hadoop/contrib/myHadoop
+PKGROOT            = /opt/hadoop/v2.2.0
 RPM.EXTRAS         = AutoReq:No
 
-SRC_SUBDIR         = myHadoop
+SRC_SUBDIR         = hadoop
 
-SOURCE_NAME        = $(NAME)
+SOURCE_NAME        = hadoop
 SOURCE_VERSION     = $(VERSION)
 SOURCE_SUFFIX      = tar.gz
 SOURCE_PKG         = $(SOURCE_NAME)-$(SOURCE_VERSION).$(SOURCE_SUFFIX)

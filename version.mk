@@ -1,5 +1,5 @@
 ROLLNAME = hadoop
-RELEASE  = 0
+RELEASE  = 1
 COLOR    = orange
 
 REDHAT.ROOT = $(PWD)

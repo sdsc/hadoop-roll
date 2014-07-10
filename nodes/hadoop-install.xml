@@ -17,8 +17,15 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 <changelog>
 </changelog>
 
+<package>hadoop-2.2.0</package>
+<package>hadoop-1.2.1</package>
 <package>hadoop</package>
 <package>myHadoop</package>
+<package>myhadoop-0.40a-sdsc</package>
 <package>hadoop-roll-test</package>
+<package>spark-0.9.1</package>
+<package>spark-0.9.1-modules</package>
+<package>hadoop-2.2.0-modules</package>
+<package>hadoop-1.2.1-modules</package>
 
 </kickstart>

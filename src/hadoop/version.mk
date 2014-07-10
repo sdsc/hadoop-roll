@@ -1,6 +1,6 @@
 NAME               = hadoop
 VERSION            = 1.1.1
-RELEASE            = 0
+RELEASE            = 1
 PKGROOT            = /opt/hadoop
 RPM.EXTRAS         = AutoReq:No
 
