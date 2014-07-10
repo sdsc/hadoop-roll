@@ -2,7 +2,7 @@
 module-whatis "Spark"
 module-whatis "Version: 0.9.1"
 
-module load hadoop/1.2.1
+module load hadoop/2.2.0
 
 prepend-path PATH /opt/spark/v0.9.1/bin
 

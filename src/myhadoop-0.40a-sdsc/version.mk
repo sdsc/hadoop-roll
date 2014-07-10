@@ -1,6 +1,6 @@
 VERSION            = 0.40a
 NAME               = myhadoop-$(VERSION)
-RELEASE            = 1
+RELEASE            = 2
 PKGROOT            = /opt/hadoop/contrib/myhadoop-0.40a-sdsc
 RPM.EXTRAS         = AutoReq:No
 

@@ -1,6 +1,6 @@
 VERSION            = 0.9.1
 NAME               = spark
-RELEASE            = 1
+RELEASE            = 2
 PKGROOT            = /opt/spark/v0.9.1
 RPM.EXTRAS         = AutoReq:No
 

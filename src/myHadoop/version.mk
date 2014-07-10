@@ -1,6 +1,6 @@
 NAME               = myHadoop
 VERSION            = 0.2a
-RELEASE            = 1
+RELEASE            = 2
 PKGROOT            = /opt/hadoop/contrib/myHadoop
 RPM.EXTRAS         = AutoReq:No
 

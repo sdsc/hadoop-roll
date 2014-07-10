@@ -4,6 +4,7 @@ module-whatis "Version: 2.2.0"
 
 # for user convenience
 prepend-path PATH /opt/hadoop/v2.2.0/bin
+prepend-path PATH /opt/hadoop/v2.2.0/sbin
 prepend-path PATH /opt/hadoop/contrib/myhadoop-0.40a-sdsc/bin
 
 # needed by Hadoop
