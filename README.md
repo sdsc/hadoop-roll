@@ -24,24 +24,23 @@ Rocks development machine.
 
 ## Dependencies
 
-Unknown at this time.
+The sdsc-roll must be installed on the build machine, since the build process
+depends on make include files provided by that roll.
 
 
 ## Building
 
-To build the hadoop-roll, execute these instructions on a Rocks development
+To build the hadoop-roll, execute this on a Rocks development
 machine (e.g., a frontend or development appliance):
 
 ```shell
-% make default 2>&1 | tee build.log
-% grep "RPM build error" build.log
+% make 2>&1 | tee build.log
 ```
 
-If nothing is returned from the grep command then the roll should have been
-created as... `hadoop-*.iso`. If you built the roll on a Rocks frontend then
-proceed to the installation step. If you built the roll on a Rocks development
-appliance you need to copy the roll to your Rocks frontend before continuing
-with installation.
+A successful build will create the file `hadoop-*.disk1.iso`.  If you built the
+roll on a Rocks frontend, proceed to the installation step. If you built the
+roll on a Rocks development appliance, you need to copy the roll to your Rocks
+frontend before continuing with installation.
 
 
 ## Installation
@@ -56,6 +55,13 @@ To install, execute these instructions on a Rocks frontend:
 % rocks run roll hadoop | bash
 ```
 
+In addition to the software itself, the roll installs hadoop environment module
+files in:
+
+```
+/opt/modulefiles/applications/hadoop
+```
+
 
 ## Testing
 
@@ -65,10 +71,4 @@ run the test scripts execute the following command(s):
 
 ```shell
 % /root/rolltests/hadoop.t 
-ok 1 - hadoop is installed
-ok 2 - hadoop test run
-ok 3 - hadoop module installed
-ok 4 - hadoop version module installed
-ok 5 - hadoop version module link created
-1..5
 ```
