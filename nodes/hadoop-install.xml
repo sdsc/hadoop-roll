@@ -14,15 +14,14 @@ Copyright (c) 2000 - 2014 The Regents of the University of California.
 All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 </copyright>
 
-<package>hadoop-2.2.0</package>
-<package>hadoop-1.2.1</package>
-<package>hadoop</package>
-<package>myHadoop</package>
-<package>myhadoop-0.40a-sdsc</package>
-<package>hadoop-roll-test</package>
-<package>spark-0.9.1</package>
-<package>spark-0.9.1-modules</package>
-<package>hadoop-2.2.0-modules</package>
-<package>hadoop-1.2.1-modules</package>
+<package>sdsc-hadoop-1</package>
+<package>sdsc-hadoop-2</package>
+<package>sdsc-hadoop-1.1.1</package>
+<package>sdsc-myHadoop</package>
+<package>sdsc-myHadoop-0.2a</package>
+<package>sdsc-spark</package>
+<package>sdsc-hadoop-roll-test</package>
+<package>sdsc-hadoop-modules</package>
+<package>sdsc-spark-modules</package>
 
 </kickstart>

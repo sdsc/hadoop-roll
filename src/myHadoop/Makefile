@@ -60,19 +60,31 @@ REDHAT.ROOT = $(CURDIR)/../../
 
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
-include pull.mk
+include $(SDSCDEVEL)/Pull.mk
+include $(SDSCDEVEL)/Rules.mk
 
+$(NAME).spec: DESCRIPTION LICENSE
+
+DESCRIPTION:
+	( \
+	  $(DESCRIBE_PKG) \
+	) > $@
+
+LICENSE: $(SRC_DIRS)
+	$(CHECK_LICENSE_FILES)
+	echo University of California > $@
 build: $(SRC_DIRS)
 	@echo "::: Package $(NAME) build complete :::"
 	
 install::
-	mkdir -p $(ROOT)/$(PKGROOT); \
-	cd $(SOURCE_DIR); \
-	cp $(CURDIR)/patch-files/myhadoop.conf etc/myhadoop.conf; \
-	cd ../; \
-	cp -r $(SOURCE_DIR)/* $(ROOT)/$(PKGROOT)/
+	mkdir -p -m 755 $(ROOT)/$(PKGROOT); \
+	( \
+	  cd $(SOURCE_DIR); \
+	  cp $(CURDIR)/patch-files/myhadoop.conf etc/myhadoop.conf; \
+	  cp -r * $(ROOT)/$(PKGROOT)/ \
+	)
+	$(INSTALL_LICENSE_FILES)
 	@echo "::: Package $(NAME) install complete :::"
 
 clean::
-	rm -rf $(SOURCE_DIR)
-
+	rm -rf $(SOURCE_DIR) DESCRIPTION LICENSE

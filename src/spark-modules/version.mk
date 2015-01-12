@@ -1,4 +1,12 @@
-NAME    = spark-0.9.1-modules
-VERSION = 0.9.1
-RELEASE = 2
-RPM.EXTRAS         = AutoReq:No
+PACKAGE     = spark
+CATEGORY    = applications
+
+NAME        = sdsc-$(PACKAGE)-modules
+RELEASE     = 3
+PKGROOT     = /opt/modulefiles/$(CATEGORY)/$(PACKAGE)
+
+VERSION_SRC = $(REDHAT.ROOT)/src/$(PACKAGE)/version.mk
+VERSION_INC = version.inc
+include $(VERSION_INC)
+
+RPM.EXTRAS  = AutoReq:No

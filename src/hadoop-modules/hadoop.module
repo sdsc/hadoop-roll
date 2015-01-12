@@ -1,11 +1,11 @@
 #%Module1.0
 module-whatis "Hadoop"
-module-whatis "Version: 1.2.1"
+module-whatis "Version: VERSION"
 
 # for user convenience
-prepend-path PATH /opt/hadoop/v1.2.1/bin
-prepend-path PATH /opt/hadoop/contrib/myhadoop-0.40a-sdsc/bin
+prepend-path PATH /opt/hadoop/VERSION/bin
+prepend-path PATH /opt/hadoop/contrib/myHadoop/bin
 
 # needed by Hadoop
-setenv HADOOP_HOME /opt/hadoop/v1.2.1
+setenv HADOOP_HOME /opt/hadoop/VERSION
 setenv JAVA_HOME /usr/java/latest
