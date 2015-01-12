@@ -69,6 +69,7 @@ install::
 	mkdir -p $(ROOT)/$(PKGROOT)
 	( \
 	  cd $(SOURCE_DIR); \
+	  cp $(CURDIR)/patch-files/* etc/hadoop/; \
 	  cp -r . $(ROOT)/$(PKGROOT); \
 	)
 	@echo "::: Package $(NAME) install complete :::"

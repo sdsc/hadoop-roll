@@ -66,10 +66,7 @@ build: $(SRC_DIRS)
 	@echo "::: Package $(NAME) build complete :::"
 	
 install::
-	mkdir -p $(ROOT)/$(PKGROOT); \
-	cd $(SOURCE_DIR); \
-	cp $(CURDIR)/patch-files/myhadoop.conf etc/myhadoop.conf; \
-	cd ../; \
+	mkdir -p $(ROOT)/$(PKGROOT)
 	cp -r $(SOURCE_DIR)/* $(ROOT)/$(PKGROOT)/
 	@echo "::: Package $(NAME) install complete :::"
 
