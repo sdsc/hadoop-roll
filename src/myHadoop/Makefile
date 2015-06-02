@@ -80,7 +80,7 @@ install::
 	mkdir -p -m 755 $(ROOT)/$(PKGROOT); \
 	( \
 	  cd $(SOURCE_DIR); \
-	  cp $(CURDIR)/patch-files/myhadoop.conf etc/myhadoop.conf; \
+	  cp $(CURDIR)/patch-files/myhadoop.conf.comet etc/myhadoop.conf; \
 	  cp -r * $(ROOT)/$(PKGROOT)/ \
 	)
 	$(INSTALL_LICENSE_FILES)
