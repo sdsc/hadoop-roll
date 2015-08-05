@@ -1,5 +1,5 @@
-NAME           = sdsc-spark
-VERSION        = 1.4.1
+NAME           = sdsc-spark-1.2.0
+VERSION        = 1.2.0
 RELEASE        = 0
 PKGROOT        = /opt/spark/$(VERSION)
 
