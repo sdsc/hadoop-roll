@@ -1,6 +1,6 @@
 #%Module1.0
 module-whatis "Spark"
-module-whatis "Version: 1.2.0"
+module-whatis "Version: VERSION"
 
 module load hadoop/2.6.0
 
