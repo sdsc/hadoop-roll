@@ -1,6 +1,6 @@
-NAME           = sdsc-spark
-VERSION        = 1.5.2
-RELEASE        = 0
+NAME           = sdsc-spark-1.2.0
+VERSION        = 1.2.0
+RELEASE        = 1
 PKGROOT        = /opt/spark/$(VERSION)
 
 SRC_SUBDIR     = spark

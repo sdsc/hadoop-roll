@@ -18,6 +18,7 @@ All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 <package>sdsc-hadoop</package>
 <package>sdsc-myHadoop</package>
 <package>sdsc-spark</package>
+<package>sdsc-spark-1.2.0</package>
 <package>sdsc-hadoop-roll-test</package>
 <package>sdsc-hadoop-modules</package>
 <package>sdsc-spark-modules</package>
