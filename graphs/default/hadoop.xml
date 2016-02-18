@@ -14,10 +14,10 @@ Copyright (c) 2000 - 2014 The Regents of the University of California.
 All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
 </copyright>
 
-<edge from="compute">
+<edge from="client">
   <to>hadoop-install</to>
 </edge>
-<order head="compute">
+<order head="client">
   <tail>hadoop-install</tail>
 </order>
 

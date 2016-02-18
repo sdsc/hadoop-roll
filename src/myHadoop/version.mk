@@ -1,6 +1,6 @@
 NAME           = sdsc-myHadoop
 VERSION        = 0.40a
-RELEASE        = 4
+RELEASE        = 5
 PKGROOT        = /opt/hadoop/contrib/myHadoop
 
 SRC_SUBDIR     = myHadoop
