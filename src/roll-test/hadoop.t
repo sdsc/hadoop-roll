@@ -42,10 +42,6 @@ SKIP: {
 SKIP: {
 
   skip "hadoop not installed", 10 if ! $isInstalled;
-  `/bin/ls /opt/modulefiles/applications/hadoop/1.1.1 2>&1`;
-  ok($? == 0, "hadoop-1.1.1 module installed");
-  `/bin/ls /opt/modulefiles/applications/hadoop/.version.1.1.1 2>&1`;
-  ok($? == 0, "hadoop-1.1.1 version module installed");
   `/bin/ls /opt/modulefiles/applications/hadoop/1.2.1 2>&1`;
   ok($? == 0, "hadoop-1.2.1 module installed");
   `/bin/ls /opt/modulefiles/applications/hadoop/.version.1.2.1 2>&1`;

@@ -5,6 +5,7 @@ module-whatis "Version: VERSION"
 # for user convenience
 prepend-path PATH /opt/hadoop/VERSION/bin
 prepend-path PATH /opt/hadoop/contrib/myHadoop/bin
+prepend-path PATH /opt/hadoop/VERSION/sbin
 
 # needed by Hadoop
 setenv HADOOP_HOME /opt/hadoop/VERSION

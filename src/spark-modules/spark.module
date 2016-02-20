@@ -7,4 +7,4 @@ module load hadoop/2.6.0
 prepend-path PATH /opt/spark/VERSION/bin
 
 # needed by Hadoop
-setenv SPARK_HOME /opt/spark/
+setenv SPARK_HOME /opt/spark/VERSION
