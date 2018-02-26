@@ -1,6 +1,6 @@
 NAME           = sdsc-spark-1.2.0
 VERSION        = 1.2.0
-RELEASE        = 1
+RELEASE        = 2
 PKGROOT        = /opt/spark/$(VERSION)
 
 SRC_SUBDIR     = spark
@@ -13,4 +13,5 @@ SOURCE_DIR     = $(SOURCE_PKG:%.$(SOURCE_SUFFIX)=%)
 
 TGZ_PKGS       = $(SOURCE_PKG)
 
-RPM.EXTRAS     = AutoReq:No
+RPM.EXTRAS     = AutoReq:No\nAutoProv:No
+RPM.PREFIX     = $(PKGROOT)
