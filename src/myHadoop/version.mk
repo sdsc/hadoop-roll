@@ -1,6 +1,6 @@
 NAME           = sdsc-myHadoop
 VERSION        = 0.40a
-RELEASE        = 5
+RELEASE        = 6
 PKGROOT        = /opt/hadoop/contrib/myHadoop
 
 SRC_SUBDIR     = myHadoop
@@ -13,4 +13,5 @@ SOURCE_DIR     = $(SOURCE_PKG:%.$(SOURCE_SUFFIX)=%)
 
 TAR_GZ_PKGS    = $(SOURCE_PKG)
 
-RPM.EXTRAS     = AutoReq:No
+RPM.EXTRAS     = AutoReq:No\nAutoProv:No
+RPM.PREFIX     = $(PKGROOT)

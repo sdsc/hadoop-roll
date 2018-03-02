@@ -2,7 +2,7 @@ PACKAGE     = spark
 CATEGORY    = applications
 
 NAME        = sdsc-$(PACKAGE)-modules
-RELEASE     = 6
+RELEASE     = 7
 PKGROOT     = /opt/modulefiles/$(CATEGORY)/$(PACKAGE)
 
 VERSION_SRC = $(REDHAT.ROOT)/src/$(PACKAGE)/version.mk
@@ -11,4 +11,5 @@ include $(VERSION_INC)
 
 EXTRA_MODULE_VERSIONS = 1.2.0
 
-RPM.EXTRAS  = AutoReq:No
+RPM.EXTRAS  = AutoReq:No\nAutoProv:No
+RPM.PREFIX  = $(PKGROOT)

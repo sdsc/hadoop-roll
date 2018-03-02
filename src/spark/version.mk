@@ -1,6 +1,6 @@
 NAME           = sdsc-spark
 VERSION        = 1.5.2
-RELEASE        = 0
+RELEASE        = 1
 PKGROOT        = /opt/spark/$(VERSION)
 
 SRC_SUBDIR     = spark
@@ -13,4 +13,5 @@ SOURCE_DIR     = $(SOURCE_PKG:%.$(SOURCE_SUFFIX)=%)
 
 TGZ_PKGS       = $(SOURCE_PKG)
 
-RPM.EXTRAS     = AutoReq:No
+RPM.EXTRAS     = AutoReq:No\nAutoProv:No\n%define __os_install_post /usr/lib/rpm/brp-compress
+RPM.PREFIX     = $(PKGROOT)
